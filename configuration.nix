@@ -18,7 +18,6 @@
       };
       grub = {
         device = "nodev";
-        forceinstall = false;
         efiSupport = true;
         enable = true;
         useOSProber = true;
@@ -39,6 +38,10 @@
   # Install fonts
   environment.systemPackages = with pkgs; [
     firefox
+	chromium
+gh
+git 
+neovim
     kitty
   ];
 
@@ -53,7 +56,6 @@
  # Bluetooth
   hardware = {
     opengl.enable = true;
-    pulseaudio.enable = true;
   	bluetooth = {
 	    enable = true;
 	    powerOnBoot = false;
@@ -90,7 +92,7 @@
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";
-    useXkbConfig = true; 
+    useXkbConfig = false; 
   };
 
   # Time configuration
@@ -133,7 +135,7 @@
 
     xserver = { 
       enable = true;
-    };
+       };
 
     libinput.enable = true;
 
@@ -141,6 +143,7 @@
       enable = true;
       interval = "weekly";
       };
+displayManager.sddm.enable = false;
   };
 
  fonts.packages = with pkgs; [
