@@ -43,9 +43,35 @@ gh
 git 
 neovim
     kitty
+    zsh
+dunst 
+rofi-wayland
+waybar 
+swww
+hyprlock
+swappy
+cliphist
+parallel
+jq
+nwg-look
+qt5ct
+qt6ct
+eza
+lsd
+unzip
+zip
+starship
+brightnessctl
+rustup
+zoxide
+fzf
+fd
+cargo
+vim
+tmux
+dolphin
   ];
 
- environment.shells = with pkgs; [ zsh ];
 
   # Hyprland
   programs.hyprland = { 
@@ -110,6 +136,7 @@ neovim
       description = "its viola, i suppose;";
       extraGroups = ["wheel" "networkmanager"];
       hashedPassword = "$6$vHKMmwAI5IGJzonT$IeTyEq21hR60k7Pkm8.keOv1cKUXFFtbqdTkp/OMs8fv622dqqadHP7kieEDe0V4UJX5WgstGcr1DpaHxYkg..";
+      shell = pkgs.zsh;
     };
   };
 
@@ -153,6 +180,8 @@ displayManager.sddm.enable = false;
     jetbrains-mono
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
  	];
+
+programs.zsh.enable = true;
 
   #nix = {
   #  settings = {
