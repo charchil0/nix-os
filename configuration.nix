@@ -14,10 +14,11 @@
     loader = {
       efi = { 
         canTouchEfiVariables = true; 
-        efiSysMountPoint = "/boot/efi";
+        #efiSysMountPoint = "/boot/efi";
       };
       grub = {
-        device = "/dev/sda";
+        device = "nodev";
+        forceinstall = false;
         efiSupport = true;
         enable = true;
         useOSProber = true;
@@ -51,7 +52,6 @@
 
  # Bluetooth
   hardware = {
-    graphics.enable = true;
     opengl.enable = true;
     pulseaudio.enable = true;
   	bluetooth = {
@@ -82,7 +82,7 @@
 
   # Sound configuration
   sound = {
-    enable = false;  # Change to true if you plan to use sound
+    enable = true;  
   };
 
   # Localization
@@ -97,7 +97,6 @@
   time = {
     timeZone = "Asia/Kathmandu";
    # hardwareClockInLocaltime = true;  
-    timeSync.enable = true;
 
   };
 
@@ -110,7 +109,6 @@
       extraGroups = ["wheel" "networkmanager"];
       hashedPassword = "$6$vHKMmwAI5IGJzonT$IeTyEq21hR60k7Pkm8.keOv1cKUXFFtbqdTkp/OMs8fv622dqqadHP7kieEDe0V4UJX5WgstGcr1DpaHxYkg..";
     };
-    defaultUserShell = pkgs.zsh;
   };
 
 
