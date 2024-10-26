@@ -2,7 +2,7 @@
 { config, lib, pkgs, ... }:
 {
   
-  flatpak.enable = false;
+  #flatpak.enable = false;
 
   # Services
   services = { 
@@ -17,6 +17,7 @@
 
     xserver = { 
       enable = true;
+displayManager.lightdm.enable = false;
        };
 
     libinput.enable = true;

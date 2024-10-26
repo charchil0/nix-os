@@ -1,9 +1,5 @@
-#{ config, pkgs, user, ... }:
+{ config, pkgs, user, ... }:
 {
-
-  imports = [
-    ./hardware-configuration.nix
-  ];
 
   documentation.nixos.enable = false;
 

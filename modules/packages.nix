@@ -10,11 +10,12 @@ firefox
 chromium
 qutebrowser
 brave
-librewolf-bin
+librewolf
 
 #System Tools
 unzip
 zip
+stow
 
 #Developement Tools
 nodejs_22
@@ -29,6 +30,9 @@ keepassxc
 #Sound 
 pamixer
 pavucontrol
+
+#video
+stremio
 ];
 
  fonts.packages = with pkgs; [

@@ -1,4 +1,4 @@
-#{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
   boot = {
     kernelParams = [ "nohibernate" "noquiet" "debug" "root=/dev/sda3" ];

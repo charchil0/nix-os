@@ -1,4 +1,4 @@
-#{ config, lib, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 {
 
   programs.hyprland = {
@@ -75,7 +75,7 @@
     vscode
 
     #File Manager
-    thunar
+    xfce.thunar
   ];
 
   #virtualization
