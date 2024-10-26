@@ -1,5 +1,6 @@
-{conifg, pkgs, user, ...}: {
-  
+#{ config, pkgs, user, ... }:
+{
+
   imports = [
     ./hardware-configuration.nix
   ];
@@ -32,3 +33,4 @@
 
 
 }
+

@@ -1,13 +1,13 @@
-{ config, lib, pkgs, ... }:
+#{ config, lib, pkgs, ... }:
 {
   boot = {
     kernelParams = [ "nohibernate" "noquiet" "debug" "root=/dev/sda3" ];
     tmp.cleanOnBoot = true;
-    
+
     loader = {
-      efi = { 
-        canTouchEfiVariables = true; 
-        efiSysMountPoint = "/boot";
+      efi = {
+        canTouchEfiVariables = true;
+        #efiSysMountPoint = "/boot";
       };
       grub = {
         device = "nodev";
@@ -20,3 +20,4 @@
     };
   };
 }
+

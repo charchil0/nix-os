@@ -1,13 +1,16 @@
-{ config, lib, pkgs, ... }:
-
+#{ config, lib, pkgs, ... }:
 {
   imports =
     [
       # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./hyprland.nix
-      ./services.nix
-      ./sound.nix
+      ./modules/boot.nix
+      ./modules/nix-config.nix
+      ./modules/packages.nix
+      ./modules/user.nix
+      ./modules/hyprland.nix
+      ./modules/services.nix
+      ./modules/sound.nix
     ];
 
 
@@ -16,22 +19,22 @@
     hostName = "viole";
     networkmanager.enable = true;
     enableIPv6 = false;
-    firewall.enable = true;  
+    firewall.enable = true;
   };
 
 
 
- # Bluetooth
+  # Bluetooth
   hardware = {
     opengl.enable = true;
-  	bluetooth = {
-	    enable = true;
-	    powerOnBoot = false;
-	    settings = {
-		    General = {
-		      #Enable = "Source,Sink,Media,Socket";
-		      #Experimental = true;
-		    };
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+      settings = {
+        General = {
+          #Enable = "Source,Sink,Media,Socket";
+          #Experimental = true;
+        };
       };
     };
   };
@@ -42,19 +45,19 @@
   console = {
     font = "Lat2-Terminus16";
     keyMap = "us";
-    useXkbConfig = false; 
+    useXkbConfig = false;
   };
 
   # Time configuration
   time = {
     timeZone = "Asia/Kathmandu";
-   # hardwareClockInLocaltime = true;  
+    # hardwareClockInLocaltime = true;  
 
   };
 
   # Users
 
-programs.zsh.enable = true;
+  programs.zsh.enable = true;
 
   #nix = {
   #  settings = {
