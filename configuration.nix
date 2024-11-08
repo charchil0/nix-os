@@ -11,6 +11,7 @@
       ./modules/hyprland.nix
       ./modules/services.nix
       ./modules/sound.nix
+      ./modules/virtualisation.nix
     ];
 
 

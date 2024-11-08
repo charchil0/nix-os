@@ -33,12 +33,13 @@ pavucontrol
 
 #video
 stremio
+
+#music
+spotify
 ];
 
  fonts.packages = with pkgs; [
     cascadia-code
-    fira-code
-    noto-fonts-cjk
     jetbrains-mono
     (nerdfonts.override {fonts = ["JetBrainsMono"];})
  	];

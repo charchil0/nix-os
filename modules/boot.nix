@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }:
 {
   boot = {
-    kernelParams = [ "nohibernate" "noquiet" "debug" "root=/dev/sda3" ];
+    kernelParams = [ "nohibernate" "noquiet" "debug" ];
     tmp.cleanOnBoot = true;
 
     loader = {

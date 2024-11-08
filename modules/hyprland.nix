@@ -39,7 +39,6 @@
 
     #hyprland packages
     hyprlock
-    hyprpaper
     hyprpicker
     dunst
     rofi-wayland
@@ -77,9 +76,6 @@
     #File Manager
     xfce.thunar
   ];
-
-  #virtualization
-  virtualisation.libvirtd.enable = true;
 
 }
 
