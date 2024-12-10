@@ -4,7 +4,7 @@
 
 
   environment.systemPackages = with pkgs; [
-    libvirtd
+    libvirt
     qemu_kvm
   ];
 

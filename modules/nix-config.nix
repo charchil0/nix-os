@@ -15,7 +15,7 @@
 
   nixpkgs = {
     config = {
-      allowUnfree = false;
+      allowUnfree = true;
       #allowUnfreePredicate = pkg: builtins.elem (builtins.parseDrvName pkg.name).name ["steam"];
       #permittedInsecurePackages = [
       #    "openssl-1.1.1v"
