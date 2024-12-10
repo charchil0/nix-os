@@ -18,7 +18,7 @@ zip
 stow
 
 #Developement Tools
-nodejs_22
+nodejs
 
 #Rust
 rustup

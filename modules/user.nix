@@ -8,8 +8,8 @@
       description = "its viola, i suppose;";
       extraGroups = ["wheel"
        "networkmanager" 
-      # "qemu" 
-      # "libvirtd" 
+      "qemu" 
+      "libvirtd" 
        "sshd" 
        "audio" 
        "video" 
